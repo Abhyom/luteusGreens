@@ -1,11 +1,17 @@
 import React from "react";
-import { outlet } from "react-router-dom";
+import "../App.css";
+import Navbar from "../Components/Navbar";
+import { Outlet } from "react-router-dom";
 
 const HomeLayout = () => {
 	return (
-		<div>
-			<nav>navbar</nav>
-			<Outlet />
+		<div className="bg-gradient-to-b from-mainGreen to-black h-screen w-screen">
+			<div className="flex flex-col justify-center items-center">
+				<Navbar />
+			</div>
+			<div className="flex flex-col justify-center items-start">
+				<Outlet />
+			</div>
 		</div>
 	);
 };

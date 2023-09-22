@@ -1,7 +1,8 @@
 import React from "react";
 import HomeLayout from "./Pages/HomeLayout";
 import LandingPage from "./Pages/LandingPage";
-import { createBrowserRouter } from "react-router-dom";
+import LeaderboardPage from "./Pages/LeaderboardPage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
 	{
@@ -12,13 +13,16 @@ const router = createBrowserRouter([
 				index: true,
 				element: <LandingPage />,
 			},
-			{},
+			{
+				path: "leaderboard",
+				element: <LeaderboardPage />,
+			},
 		],
 	},
 ]);
 
 const App = () => {
-	return <div className="app"></div>;
+	return <RouterProvider router={router} />;
 };
 
 export default App;

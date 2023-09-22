@@ -9,7 +9,7 @@ const HomeLayout = () => {
 			<div className="flex flex-col justify-center items-center">
 				<Navbar />
 			</div>
-			<div className="flex flex-col justify-center items-start">
+			<div className="">
 				<Outlet />
 			</div>
 		</div>

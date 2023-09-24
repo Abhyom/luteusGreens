@@ -10,6 +10,7 @@ import {
 	TablePagination,
 } from "@mui/material";
 import { CellTower } from "@mui/icons-material";
+import axios from "axios";
 
 const MultiTable = () => {
 	const columns = [
@@ -46,12 +47,13 @@ const MultiTable = () => {
 
 				// Calculate finalScore for each row
 				const dataWithScores = response.data.map((row) => {
-					const score =
+					const number =
 						row.vw * weights.vw +
 						row.sq * weights.sq +
 						row.c * weights.c +
 						row.ei * weights.ei +
 						row.ce * weights.ce;
+					const score = Math.round(number * 10000) / 100;
 					return { ...row, score };
 				});
 

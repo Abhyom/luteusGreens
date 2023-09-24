@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../assets/leafLogo.png";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { House, Crown, CurrencyInr, ThumbsUp } from "phosphor-react";
 
@@ -22,7 +22,7 @@ const Navbar = () => {
 				<hr className="h-[2px] w-[70%] mr-0 border-0 bg-[#6d7f7f] absolute left-[-500px]" />
 				<ul className="text-white flex mr- space-x-20 text-lg rel">
 					<li className="group flex items-center h-[80px] hover:border-b-4 hover:border-[#25bdab]">
-						<NavLink className="h-[100%] flex items-center">
+						<Link className="h-[100%] flex items-center">
 							<span className="mr-2">
 								<House
 									size={21}
@@ -32,7 +32,7 @@ const Navbar = () => {
 								/>
 							</span>
 							Home
-						</NavLink>
+						</Link>
 					</li>
 					<li
 						className={
@@ -41,7 +41,7 @@ const Navbar = () => {
 								: "group flex items-center h-[80px] hover:border-b-4 hover:border-[#25bdab]"
 						}
 					>
-						<NavLink
+						<Link
 							to="/leaderboard"
 							className="group h-[100%] flex items-center"
 						>
@@ -54,10 +54,10 @@ const Navbar = () => {
 								/>
 							</span>
 							Leaderboard
-						</NavLink>
+						</Link>
 					</li>
 					<li className="flex items-center group h-[80px] hover:border-b-4 hover:border-[#25bdab]">
-						<NavLink className="h-[100%] flex items-center">
+						<Link className="h-[100%] flex items-center">
 							<span className="mr-2">
 								<CurrencyInr
 									size={21}
@@ -67,10 +67,13 @@ const Navbar = () => {
 								/>
 							</span>
 							Sell Us
-						</NavLink>
+						</Link>
 					</li>
 					<li className="flex items-center group h-[80px] hover:border-b-4 hover:border-[#25bdab]">
-						<NavLink className="h-[100%] flex items-center">
+						<Link
+							className="h-[100%] flex items-center"
+							to="/bestPractise"
+						>
 							<span className="mr-2">
 								<ThumbsUp
 									size={21}
@@ -80,7 +83,7 @@ const Navbar = () => {
 								/>
 							</span>
 							Best Practisces
-						</NavLink>
+						</Link>
 					</li>
 				</ul>
 			</div>

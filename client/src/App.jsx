@@ -2,6 +2,7 @@ import React from "react";
 import HomeLayout from "./Pages/HomeLayout";
 import LandingPage from "./Pages/LandingPage";
 import LeaderboardPage from "./Pages/LeaderboardPage";
+import BestPage from "./Pages/BestPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -14,8 +15,12 @@ const router = createBrowserRouter([
 				element: <LandingPage />,
 			},
 			{
-				path: "leaderboard",
+				path: "/leaderboard",
 				element: <LeaderboardPage />,
+			},
+			{
+				path: "/bestPractise",
+				element: <BestPage />,
 			},
 		],
 	},
